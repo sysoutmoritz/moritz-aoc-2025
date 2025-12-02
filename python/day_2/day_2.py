@@ -16,8 +16,8 @@ def solution():
                 if id[:len(id)//2]*2 == id:
                     sum += int(id)
 
-    print(f"Answer: {sum}")
-                    
+    print(f"Answer: {sum}")             
 
 if __name__ == "__main__":
     solution()
+    

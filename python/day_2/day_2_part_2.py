@@ -21,8 +21,7 @@ def solution():
                         sum += int(id)
                         break
 
-    print(f"Answer: {sum}")         
-                    
+    print(f"Answer: {sum}")                       
 
 if __name__ == "__main__":
     solution()
