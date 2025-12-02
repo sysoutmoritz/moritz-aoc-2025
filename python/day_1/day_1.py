@@ -4,18 +4,18 @@ def solution():
 
     with open("input.txt") as file:
         for line in file:
-
             line = line.strip()
-            #print(f"Dial before: {dial}, line is {line}")
 
+            # Adjust dial based on instruction
             if line.startswith("L"):
                 dial -= int(line[1:])
             elif line.startswith("R"):
                 dial += int(line[1:])
 
+            # Make sure dial is within 0-99
             dial %= 100
-            #print(f"Dial after: {dial}")
 
+            # Count if dial is at 0
             if dial == 0:
                 count += 1
 
