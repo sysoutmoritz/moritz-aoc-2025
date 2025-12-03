@@ -1,7 +1,10 @@
+import time, os
+
 def solution():
+    start_time = time.perf_counter()
     sum = 0
 
-    with open('input.txt', 'r') as file:
+    with open(os.path.join('python', 'day_2', 'input.txt'), 'r') as file:
 
         # Get all ID ranges as a list
         file = file.read().strip().split(',')
@@ -21,7 +24,9 @@ def solution():
                         sum += int(id)
                         break
 
-    print(f"Answer: {sum}")                       
+    end_time = time.perf_counter()
+    print(f"Answer: {sum}")
+    print(f"Time taken: {end_time - start_time:.9f} seconds")                       
 
 if __name__ == "__main__":
     solution()

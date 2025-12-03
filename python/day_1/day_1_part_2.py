@@ -1,8 +1,11 @@
+import time, os
+
 def solution():
+    start_time = time.perf_counter()
     dial = 50
     count = 0
 
-    with open("input.txt") as file:
+    with open(os.path.join('python', 'day_1', 'input.txt')) as file:
         for line in file:
             line = line.strip()
 
@@ -25,7 +28,9 @@ def solution():
             # Make sure dial is within 0-99
             dial %= 100
 
+    end_time = time.perf_counter()
     print(f"Answer: {count}")
+    print(f"Time taken: {end_time - start_time:.9f} seconds")
 
 if __name__ == "__main__":
     solution()
