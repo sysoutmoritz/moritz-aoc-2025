@@ -43,7 +43,7 @@ def solution():
                     # Exit early if more than 3 neighbors are found
                     if not still_possible:
                         break
-                    
+
                     for y in range(-1, 2):
                         if not (x == 0 and y==0) and padding_field[i + x][j + y] == '@':
                             count += 1
@@ -60,5 +60,6 @@ def solution():
     end_time = time.perf_counter()
     print(f"Answer: {sum}")
     print(f"Time taken: {end_time - start_time:.9f} seconds")
+    
 if __name__ == "__main__":
     solution()
